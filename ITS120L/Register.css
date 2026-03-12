@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Container */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blurred-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1556912172-45b7cc8a4959?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(15px);
+    transform: scale(1.1);
+}
+
+/* Form Container */
+.form-container {
+    position: relative;
+    background: white;
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 450px;
+    width: 90%;
+    margin: 50px auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo svg {
+    display: block;
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+
+.ai-text {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Form */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Groups */
+.input-group {
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #eeeeee;
+    box-shadow: 0 0 0 3px rgba(109, 213, 237, 0.2);
+}
+
+/* Create Account Button */
+.create-account-btn {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #6dd5ed;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.create-account-btn:hover {
+    background-color: #5bc4d9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(109, 213, 237, 0.4);
+}
+
+.create-account-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(109, 213, 237, 0.3);
+}
+
+/* Footer Link */
+.footer-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-link {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #6dd5ed;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 40px 30px;
+        margin: 30px auto;
+        max-width: 400px;
+    }
+    
+    .form-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .logo svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .registration-form {
+        gap: 18px;
+    }
+    
+    .input-group input {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+    
+    .create-account-btn {
+        padding: 15px 18px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 35px 25px;
+        margin: 20px auto;
+        border-radius: 25px;
+        width: 95%;
+    }
+    
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .logo svg {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    .registration-form {
+        gap: 16px;
+    }
+    
+    .input-group input {
+        padding: 13px 16px;
+        font-size: 14px;
+    }
+    
+    .create-account-btn {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+    
+    .footer-link {
+        margin-top: 20px;
+    }
+    
+    .login-link {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 500px;
+        padding: 60px 50px;
+    }
+    
+    .form-title {
+        font-size: 32px;
+    }
+
+    .show-hide-text {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6dd5ed;
+        font-size: 14px;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .show-hide-text:hover {
+        color: #1a4d7a;
+    }
+}
