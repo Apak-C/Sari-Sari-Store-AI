@@ -1,0 +1,29 @@
+# Sari-Sari Store Inventory Management System with AI Prediction
+
+## Project Overview
+A web-based Inventory Management System with integrated POS (Point of Sale) functionality and AI-powered stock prediction designed specifically for small retail stores (Sari-Sari stores) in the Philippines. This system digitizes inventory tracking, automates sales analytics, and predicts stock depletion using a 7-day average AI algorithm to help store owners make data-driven decisions.
+
+## Tech Stack
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript
+* **Backend:** PHP (7.4+)
+* **Database:** MySQL
+* **Environment:** XAMPP / Localhost
+
+## How to Set Up the Local Environment
+Follow these steps to run the application on your local machine:
+
+1. **Install Local Server:** Download and install [XAMPP](https://www.apachefriends.org/) (or similar web server like WAMP/MAMP).
+2. **Start Services:** Open the XAMPP Control Panel and start the **Apache** and **MySQL** modules.
+3. **Download Repository:** Download this project as a ZIP file and extract it.
+4. **Place Files:** Move the extracted `ITS120L` project folder into your local web directory (e.g., `C:\xampp\htdocs\ITS120L`).
+5. **Automated Database Setup:** Open your web browser and run the setup script to automatically configure the database and tables:
+   `http://localhost/ITS120L/setup.php`
+6. **Access the Application:** Once setup is complete, navigate to the landing page to register an account or log in:
+   `http://localhost/ITS120L/`
+
+## Core Modules
+* **Authentication:** Secure user login, registration, and password recovery.
+* **Inventory Dashboard:** Full CRUD operations with quick stock adjustments (+/-).
+* **Point of Sale (POS):** Cart system with automated stock deduction upon sale completion.
+* **Analytics Reports:** Daily/weekly sales, profit/loss calculations, and Hot & Cold item rankings.
+* **AI Prediction:** Analyzes the last 7 days of sales to predict exact stock-out dates.
